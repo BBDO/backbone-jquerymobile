@@ -1,4 +1,15 @@
-window.HomeView = Backbone.View.extend({
+  var Spot = Backbone.Model.extend({
+    defaults: {
+      markerX: 'k5',
+      markerY: 'spot'
+    }
+  });
+
+  var List = Backbone.Collection.extend({
+    model: Spot
+  });
+
+  window.HomeView = Backbone.View.extend({
 
     template:_.template($('#home').html()),
 
@@ -9,11 +20,27 @@ window.HomeView = Backbone.View.extend({
 });
 
 window.Page1View = Backbone.View.extend({
-
+    tagName:'li',
     template:_.template($('#page1').html()),
-
+    events:{
+      'click button': 'handleEvent'
+    },
+    handleEvent:function(){
+        var hotspot = new Spot()
+        var xVal = $('#inputx').val(),
+            yVal = $('#inputy').val()
+        hotspot.set({part1: xVal,part2: yVal})
+        var x = hotspot.get('part1')
+            y = hotspot.get('part2')
+        this.showTip(x,y)
+        $(this.el).append('<div class=point style=position:absolute;top:'+x+'px;left:'+y+'px >x</div>')
+    },
+    showTip:function(x,y){
+        // $(this.el).append('<div class=tip style=position:absolute;top:'+markerX+'px;left:'+markerY+'px >tool tip content</div>')
+    },
     render:function (eventName) {
         $(this.el).html(this.template());
+        $(this.el).append('<h1>enter coordinates</h1>').append('<input id=inputx />').append('<input id=inputy />').append('<button>save</button')
         return this;
     }
 });
