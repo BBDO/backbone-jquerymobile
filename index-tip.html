@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <link rel="stylesheet" href="css/jquery.jscrollpane.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+  <link rel="stylesheet" href="css/jquery.julienTooltip.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+  <style type="text/css">
+  body {
+    font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  }
+  table td {
+    width: 300px; height: 200px;
+  }
+  #example1, #example2, #example3, #example4, #example5, #example6 {
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 9px;
+  }
+  #example1 {
+    background: #992E13;
+  }
+  #example2 {
+    background: #63995E;
+  }
+  #example3, #example5 {
+    background: #2D7799;
+  }
+  #example4, #example6 {
+    background: #D0D37A;
+  }
+  </style>
+  <script src="js/jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.jscrollpane.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.julienTooltip.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+  $(function(){
+    $('div#example1').julienTooltip({
+      'location':'right'
+    });
+    $('div#example2').julienTooltip({
+      'location':'left'
+    });
+    $('div#example3').julienTooltip({
+      'location':'top'
+    });
+    $('div#example4').julienTooltip({
+      'location':'bottom',
+      'event':'mouseover'
+    });
+    $('div#example5').julienTooltip({
+      'location':'top',
+      'event':'mouseover',
+      'autoresize': true
+    });
+    $('div#example6').julienTooltip({
+      'location':'right',
+      'event':'mouseover',
+      'autoresize': true
+    });
+  });
+  </script>
+</head>
+<body>
+  <table border="1" cellspacing="5" cellpadding="5">
+    <tr>
+      <td><div id="example1">right<div class="jt_content">Ho ho ho<br/>!!!!!!!!!!!</div></div></td>
+      <td><div id="example2">left<div class="jt_content">This <br/>tooltip<br/>has<br/>way<br/>too<br/>much<br/>lines<br/>in<br/>it</div></div></td>
+    </tr>
+    <tr>
+      <td><div id="example3">top<div class="jt_content">This tooltip has waaaaaaaaaaaaaaaayyyyyyyyyyyyyyyyyyyyyyyyy tooo much content inside it.</div></div></td>
+      <td><div id="example4">bottom<div class="jt_content">Ho ho ho<br/>!!!!!!!!!!!</div></div></td>
+    </tr>
+  </table>
+  <table border="1" cellspacing="5" cellpadding="5">
+    <tr>
+      <td><div id="example5">right<div class="jt_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna nunc, dignissim sed mattis sed, luctus a nisi. Integer ac mauris libero. Cras molestie, lacus a congue semper, est urna varius metus, ut feugiat lorem sem eu dolor. Phasellus in neque ac tellus blandit suscipit nec sit amet purus. Nullam interdum consequat eros in tristique. Quisque volutpat, leo ac fringilla ullamcorper, diam dolor volutpat ante, eu vehicula justo eros ac sem. Vestibulum et libero non quam vestibulum tempor id sed sapien. Sed fringilla suscipit volutpat. Maecenas quis ante non sem interdum interdum. Nullam vel velit ut dui sagittis pretium.</div></div></td>
+      <td><div id="example6">left<div class="jt_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna nunc, dignissim sed mattis sed, luctus a nisi. Integer ac mauris libero. Cras molestie, lacus a congue semper, est urna varius metus, ut feugiat lorem sem eu dolor. Phasellus in neque ac tellus blandit suscipit nec sit amet purus. Nullam interdum consequat eros in tristique. Quisque volutpat, leo ac fringilla ullamcorper, diam dolor volutpat ante, eu vehicula justo eros ac sem. Vestibulum et libero non quam vestibulum tempor id sed sapien. Sed fringilla suscipit volutpat. Maecenas quis ante non sem interdum interdum. Nullam vel velit ut dui sagittis pretium.</div></div></td>
+    </tr>
+  </table>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+</body>
+</html>

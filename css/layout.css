@@ -1,0 +1,21 @@
+body{
+	color: #fff;
+}
+#spot-wrap{
+	position: absolute;
+}
+.tip-box{
+	position: absolute;
+	z-index: 1;
+}
+.tip-wrap{
+	position: absolute;
+	top: 5000px;
+	left: 5000px;
+}
+.tip-content{
+	display: none
+}
+.tip-wrap b{
+	cursor:pointer
+}
