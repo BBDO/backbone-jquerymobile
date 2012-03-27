@@ -15,6 +15,15 @@ lo.List = Backbone.Collection.extend({
 
 lo.HomeView = Backbone.View.extend({
 
+    initialize:function(){
+        $(this.el).on('click','.point', function(){
+            $(this).next().fadeToggle()
+        })
+        $(this.el).on('click','.tip', function(){
+            $(this).fadeOut()
+        })
+
+    },
     template:_.template($('#home').html()),
     events:{
       'click button': 'handleEvent'
@@ -26,19 +35,11 @@ lo.HomeView = Backbone.View.extend({
         hotspot.set({part1: xVal,part2: yVal})
         var spotTip = hotspot.get('tip')
         $(this.el).append('<b style=position:absolute;top:'+xVal+'px;left:'+yVal+'px class=point-wrap><div class=point >x</div><div style=display:none class=tip /></b>')
-        this.initializeEvents()
-    },
-    initializeEvents:function(){
-        $('.point').on('click',function(){
-            $(this).next().fadeToggle()
-        })
-        $('.tip').on('click',function(){
-            $(this).fadeOut()
-        })
+        // this.initializeEvents()
     },
     render:function (eventName) {
         $(this.el).html(this.template());
-        $(this.el).append('<h1>enter coordinates</h1>').append('<input id=inputx />').append('<input id=inputy />').append('<button>save</button')
+        // $(this.el).append('<h1>enter coordinates</h1>').append('<input id=inputx />').append('<input id=inputy />').append('<button>save</button')
         return this;
     }
 
