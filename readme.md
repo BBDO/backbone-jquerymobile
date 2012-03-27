@@ -1,3 +1,3 @@
-# Backbone.js, jQuery Mobile, Reel
+# iPad app prototype
 
-This application demonstrates the usage of Backbone.js, jQuery Mobile and Reel
+demonstrating using jQuery Reel with Express and Mongo
